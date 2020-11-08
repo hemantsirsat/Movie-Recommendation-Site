@@ -1,0 +1,47 @@
+.form1{
+    padding: 10px;
+    width: 30%;
+    position: fixed;
+    left:35%;
+    top: 30%;
+}
+.form1 button{
+    width:100%;
+}
+.about{
+    text-align: center;
+    position: relative;
+    padding: 30px;
+}
+.movie{/*
+    position: fixed;*/
+    margin-top: 10px;
+    padding: 20px;
+    background-color: seashell ;
+}
+.write{
+    position: relative;
+    margin-top:30% ;
+}
+.write button, .post-button{
+    width: 100%;
+}
+.username{
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content{
+    color:grey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.online{
+    background-color: lavender;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#favourite-button{
+    position: relative;
+    right: 0;
+}
