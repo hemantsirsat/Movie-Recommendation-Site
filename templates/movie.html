@@ -11,13 +11,22 @@
         <div class='row'>
             <div class="col">
                 <h4>The Movies Similar to <b>{{myMovie}}</b> Are As Follows:</h4>
-                <div class="movie">
+                <table>
+                    <tr>
+                        <th>Movie Name</th>
+                        <th>Movie Link</th>
+                        <th>IMDB</th>
+                    </tr>
                     {% for movie in movies %}
-                    <div class="story">
-                        {{movie}}
-                    </div>
+
+                    <tr>
+                        <td>{{movie}}</td>
+                        <td>{{movie}}</td>
+                        <td>{{movie}}</td>
+                    </tr>
+
                     {% endfor %}
-                </div>
+                </table>
             </div>
         </div>
     </div>

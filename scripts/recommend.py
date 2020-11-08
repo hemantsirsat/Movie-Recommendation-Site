@@ -9,10 +9,13 @@ class Recommend:
         def get_title_from_index(index):
             return df[df.index == index]["title"].values[0]
 
+        def get_imdb_from_index(index):
+            return df[df.index == index]["vote_average"].values[0]
+
         def get_index_from_title(title):
             return df[df.title == title]["index"].values[0]
 
-        df = pd.read_csv('/home/hemant/Desktop_Custom/Online_Movie_Recomendation/scripts/movie_dataset.csv')
+        df = pd.read_csv('movie_dataset.csv')
 
         features = ['keywords','cast','genres','director']
 
