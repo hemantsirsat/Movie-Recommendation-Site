@@ -34,7 +34,7 @@ body{
     padding: 20px;
     resize: both;
     overflow: auto;
-    max-height: 70%;
+    max-height: 80%;
 }
 
 .center h1{
