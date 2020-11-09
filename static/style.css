@@ -2,7 +2,7 @@ body{
     background: -webkit-linear-gradient(left, #25c481, #25b7c4);
     background: linear-gradient(to right, #25c481, #25b7c4);
     font-family: 'Roboto', sans-serif;
-  }
+}
 
 .form1{
     padding: 10px;
@@ -26,7 +26,7 @@ body{
 }
 
 .center{
-    width: 35%;
+    min-width: 70%;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -34,6 +34,7 @@ body{
     padding: 20px;
     resize: both;
     overflow: auto;
+    max-height: 70%;
 }
 
 .center h1{
