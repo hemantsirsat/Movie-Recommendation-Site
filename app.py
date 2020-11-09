@@ -8,17 +8,16 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         movie_user_like = request.form['movie_user_like']
-        session['movie'] = movie_user_like
-        return redirect(url_for('movie'))
+        #session['movie'] = movie_user_like
+        return redirect(url_for('movie',user_movie=movie_user_like))
     return render_template("home.html")
 
 @app.route('/similar_movie',methods=['POST','GET'])
-def movie():
+def movie(user_movie):
     similar_movies = Recommend
-    names = similar_movies.show_similar_movies(session['movie'])
-    print(names)
+    names = similar_movies.show_similar_movies(user_movie)
     return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']),myMovie=session['movie'])
 
 if __name__=='__main__':
-    app.secret_key = 'highly{/jhuikko;[]]]]*8678'
+    #app.secret_key = 'highly{/jhuikko;[]]]]*8678'
     app.run(debug=True,port=5002)
