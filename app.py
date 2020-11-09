@@ -20,8 +20,9 @@ def movie():
     names = similar_movies.show_similar_movies(session['movie'])
     if request.method == 'POST':
         session.clear()
+        i=0
         return redirect(url_for('index'))
-    return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']),myMovie=session['movie'])
+    return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']))
 
 if __name__=='__main__':
     app.run(debug=True,port=5000)

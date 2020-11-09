@@ -8,23 +8,19 @@
     </button>
   </nav>
     <div class="container">
-        <div class='row'>
-            <div class="col">
-                <h4>The Movies Similar to <b>{{myMovie}}</b> Are As Follows:</h4>
-                <table>
-                    {% for movie in movies %}
-
-                    <tr>
-                        <td>{{movie}}</td>
-                    </tr>
-
-                    {% endfor %}
-                    
-                </table>
-                <form method="POST">
-                    <button type="submit" class="btn btn-info">Search For Another Movie</button>
-                </form>
-            </div>
+        <div class="center">
+            <h1><b>Movies We Think You'll Like: </b></h1>
+            <table class="pure-table pure-table-horizontal"> 
+                {% for movie in movies %}
+                <tr>
+                    <td>{{movie}}</td>
+                </tr>
+                {% endfor %}
+                
+            </table>
+            <form method="POST">
+                <button type="submit" class="btn btn-info new-movie">Search For Another Movie</button>
+            </form>
         </div>
     </div>
 {% endblock %}
