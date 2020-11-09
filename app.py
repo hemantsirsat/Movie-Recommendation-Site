@@ -3,6 +3,8 @@ from scripts.recommend import Recommend
 import sys
 
 app = Flask(__name__)
+app.config['SESSION_TYPE'] = 'memcached'
+app.config['SECRET_KEY'] = 'super secret key'
 
 @app.route('/',methods=['GET','POST'])
 def index():
@@ -19,5 +21,4 @@ def movie():
     return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']),myMovie=session['movie'])
 
 if __name__=='__main__':
-    app.secret_key = 'highly{/jhuikko;[]]]]*8678'
-    app.run(debug=True,port=5002)
+    app.run(debug=True,port=5000)
