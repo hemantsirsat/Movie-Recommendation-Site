@@ -10,10 +10,16 @@ class Recommend:
             return df[df.index == index]["title"].values[0]
 
         def get_imdb_from_index(index):
-            return df[df.index == index]["vote_average"].values[0]
+            try:
+                return df[df.index == index]["vote_average"].values[0]
+            except:
+                i=1
 
         def get_index_from_title(title):
-            return df[df.title == title]["index"].values[0]
+            try:
+                return df[df.title == title]["index"].values[0]
+            except:
+                i=1
 
         df = pd.read_csv('movie_dataset.csv')
 
@@ -43,4 +49,7 @@ class Recommend:
             i=i+1
             if i>5:
                 break
-        return [results for results in result] 
+        if result !=[]:
+            return [results for results in result] 
+        else:
+            return(["No Such Movie Found. Enter Name Starting with Capital Alphabet or Try Different Movie"])

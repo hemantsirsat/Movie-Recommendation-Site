@@ -12,21 +12,18 @@
             <div class="col">
                 <h4>The Movies Similar to <b>{{myMovie}}</b> Are As Follows:</h4>
                 <table>
-                    <tr>
-                        <th>Movie Name</th>
-                        <th>Movie Link</th>
-                        <th>IMDB</th>
-                    </tr>
                     {% for movie in movies %}
 
                     <tr>
                         <td>{{movie}}</td>
-                        <td>{{movie}}</td>
-                        <td>{{movie}}</td>
                     </tr>
 
                     {% endfor %}
+                    
                 </table>
+                <form method="POST">
+                    <button type="submit" class="btn btn-danger">Search For Another Movie</button>
+                </form>
             </div>
         </div>
     </div>

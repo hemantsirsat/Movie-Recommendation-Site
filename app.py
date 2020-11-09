@@ -18,6 +18,9 @@ def index():
 def movie():
     similar_movies = Recommend
     names = similar_movies.show_similar_movies(session['movie'])
+    if request.method == 'POST':
+        session.clear()
+        return redirect(url_for('index'))
     return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']),myMovie=session['movie'])
 
 if __name__=='__main__':
