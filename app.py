@@ -20,7 +20,6 @@ def movie():
     names = similar_movies.show_similar_movies(session['movie'])
     if request.method == 'POST':
         session.clear()
-        i=0
         return redirect(url_for('index'))
     return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']))
 
