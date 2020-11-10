@@ -13,13 +13,13 @@ class Recommend:
             try:
                 return df[df.index == index]["vote_average"].values[0]
             except:
-                i=1
+                i=1 #No-Operation
 
         def get_index_from_title(title):
             try:
                 return df[df.title == title]["index"].values[0]
             except:
-                i=1
+                i=1 #No-Operation
 
         df = pd.read_csv('movie_dataset.csv')
         df['title'] = df['title'].str.upper()
