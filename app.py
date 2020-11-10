@@ -9,7 +9,7 @@ app.config['SECRET_KEY'] = 'super secret key'
 @app.route('/',methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        movie_user_like = request.form['movie_user_like']
+        movie_user_like = request.form['movie_user_like'].upper()
         session['movie'] = movie_user_like
         return redirect(url_for('movie'))
     return render_template("home.html")
@@ -24,4 +24,4 @@ def movie():
     return render_template('movie.html',movies = similar_movies.show_similar_movies(session['movie']))
 
 if __name__=='__main__':
-    app.run(debug=True,port=5000)
+    app.run(debug=True,port=5001)

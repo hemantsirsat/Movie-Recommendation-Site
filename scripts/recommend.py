@@ -22,6 +22,7 @@ class Recommend:
                 i=1
 
         df = pd.read_csv('movie_dataset.csv')
+        df['title'] = df['title'].str.upper()
 
         features = ['keywords','cast','genres','director']
 
@@ -45,7 +46,7 @@ class Recommend:
         i=0
         result = []
         for element in sorted_similar_movies:
-            result.append((get_title_from_index(element[0])))
+            result.append((get_title_from_index(element[0]).title()))
             i=i+1
             if i>5:
                 break
