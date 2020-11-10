@@ -53,4 +53,4 @@ class Recommend:
         if result !=[]:
             return [results for results in result] 
         else:
-            return(["No Such Movie Found. Enter Name Starting with Capital Alphabet or Try Different Movie"])
+            return(["No Such Movie Found. Try Different Movie"])
